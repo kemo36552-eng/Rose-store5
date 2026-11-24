@@ -614,7 +614,7 @@ $("#cartBody").addEventListener("change",e=>{if(0){}});
 $("#cartBody").addEventListener("submit",e=>{
  e.preventDefault();
  const dm=igDM();
- const wa=`<a class="go wa" href="https://wa.me/972569866978?text=${encodeURIComponent(msg())}" target="_blank" rel="noopener">ابعتي الطلب على واتساب ✆</a><div style="text-align:center;font-size:14px;color:var(--soft);font-weight:600">أو على الانستغرام:</div>`;
+ const wa=`<a class="go wa" href="https://wa.me/972569866978?text=${encodeURIComponent(msg())}" target="_blank" rel="noopener">ابعتي الطلب على واتساب ✆ <span dir="ltr" style="font-size:.8em;opacity:.9">0569866978</span></a><a class="go wa" style="margin-top:8px" href="https://wa.me/972592604434?text=${encodeURIComponent(msg())}" target="_blank" rel="noopener">أو على واتساب ✆ <span dir="ltr" style="font-size:.8em;opacity:.9">0592604434</span></a><div style="text-align:center;font-size:14px;color:var(--soft);font-weight:600">أو على الانستغرام:</div>`;
  const ig=wa+`<button class="go gold" id="copyMsg" type="button">١. انسخي الطلب</button>`+(dm?`<a class="go ig" id="sendIG" href="${esc(dm)}" target="_blank" rel="noopener">٢. افتحي انستغرام والصقيه ♡</a>`:"");
  $("#out").innerHTML=`<div class="done"><b>طلبك جاهز ♡</b><span style="font-size:14px;color:var(--soft)">اضغطي "ابعتي الطلب على واتساب" وبينفتح الواتساب والطلب مكتوب جاهز، بس اضغطي إرسال. وإذا بتحبي الانستغرام: انسخي الطلب والصقيه بمحادثتنا.</span><textarea id="orderTxt" readonly rows="7" style="font-size:14px;line-height:1.6;background:var(--blush);border:0;resize:none"></textarea><div id="copied" style="display:none;text-align:center;font-weight:700;color:#2e9d6a">✓ انتسخ الطلب، هلأ افتحي انستغرام والصقيه</div>${ig}</div>`;
  $("#orderTxt").value=msg();
